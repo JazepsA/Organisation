@@ -1,0 +1,28 @@
+{
+    "organisations": [
+        {
+            "name": "Pata",
+            "adress": "Raina iela",
+            "id": "12-41241",
+            "contacts": [
+                {
+                    "name": "Dainis",
+                    "position": "CEO",
+                    "id": "123412-412"
+                }
+            ]
+        },
+        {
+            "name": "Tesla",
+            "adress": "Kuva",
+            "id": "12",
+            "contacts": []
+        },
+        {
+            "name": "RAASDD",
+            "adress": "IEva",
+            "id": 22,
+            "contacts": []
+        }
+    ]
+}

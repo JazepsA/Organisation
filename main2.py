@@ -1,12 +1,21 @@
+import json
+
 organisations=[]
 
 
-print(organisations)
+#print(organisations)
+
+# ielasa datus no json formata un  pardeve tos vardnica
+def load_data():
+    file=open('organisations.json','r')
+    data=json.load(file)
+    file.close()
+    global organisations
+    organisations=data['organisations']
+    print("Dati loaded")
 
 
-while (True):
-    response=input("(1) Add organisation (2) Print organisations (3) Exit ")
-    if response=="1":
+def add_organisation():
         organisation_name=input("Organisation name:")
         organisation_adress=input("Organisation adress:")
         organisation_id=input("Organisation id:")
@@ -34,19 +43,66 @@ while (True):
                 organisation['contacts'].append(contact)
 
             elif response=='n':
+
                 break
 
-
         organisations.append(organisation)
-
-    elif response =="2":
-        for organisation in organisations:
+        
+def print_organisation():
+    for organisation in organisations:
             print('---ORGANISATION---')
             print(f"{organisation['name']}({organisation['id']})")
             print(f"Adrese:{organisation['adress']}")
             print(f"Kontaktu skaits: {len(organisation['contacts'])}")
-    elif response =="3":
-        print("byeeeeeeeeeeeee!")
-        exit()
+
+def save_data():
+    data={
+            'organisations': organisations
+        }
+    print('saving data...')
+    file = open('organisations.json',"w")
+    json.dump(data,file,indent=4)
+    print("Data saved!")
+
+def find_organisation_by_id():
+    organisation_id=input("Ievadiet organizacijas ID: ")
+    for organisation in organisations:
+          if organisation['id']== organisation_id:
+               print("---ORGANIZACIJA---")
+               print(f"{organisation['name']}({organisation['id']})")
+               break #talak neturpina ciklu jo mes jau atradam
+
+def count_organisations():
+    print(f"Ievadīto organizaciju skaits ir :{len(organisations)} ")
+
+def list_organisation_ids():
+    for i in organisations:
+         print('\n'+i['id'])
+
+def organisation_exists():
+     a=int(input("Ievadiet organizacijas id ,kuru velaties uzzinat ,vai tas ir?: "))
+     if organisations['id'] == a:
+          return True
+    
 
 
+def main():
+    load_data()
+    find_organisation_by_id()
+    count_organisations()
+    list_organisation_ids()
+    #organisation_exists()
+    while (True):
+        response=input("(1) Add organisation (2) Print organisations (3) Exit ")
+        if response=="1":
+            add_organisation()
+        elif response =="2":
+            print_organisation()
+        elif response =="3":
+            save_data()
+            print("Bye bye!")
+            exit()
+        else:
+            print("Choose a number between 1 and 3")
+            continue
+main()

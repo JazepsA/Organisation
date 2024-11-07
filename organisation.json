@@ -1,0 +1,16 @@
+{
+    "organisation": [
+        {
+            "name": "Tukumi",
+            "adress": "Ieva iela",
+            "id": "13124-123131",
+            "contacts": [
+                {
+                    "name": "Dainis",
+                    "position": "CEO",
+                    "id": "14124-23131"
+                }
+            ]
+        }
+    ]
+}
