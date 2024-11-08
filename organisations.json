@@ -13,16 +13,16 @@
             ]
         },
         {
-            "name": "Tesla",
-            "adress": "Kuva",
-            "id": "12",
-            "contacts": []
-        },
-        {
-            "name": "RAASDD",
-            "adress": "IEva",
-            "id": 22,
-            "contacts": []
+            "name": "Agris",
+            "adress": "Pusia street",
+            "id": "111",
+            "contacts": [
+                {
+                    "name": "Agris",
+                    "position": "Admin",
+                    "id": "228"
+                }
+            ]
         }
     ]
 }

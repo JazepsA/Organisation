@@ -65,7 +65,7 @@ def save_data():
     print("Data saved!")
 
 def find_organisation_by_id():
-    organisation_id=input("Ievadiet organizacijas ID: ")
+    organisation_id=input("Ievadiet organizacijas ID,kuru info velaties atrast: ")
     for organisation in organisations:
           if organisation['id']== organisation_id:
                print("---ORGANIZACIJA---")
@@ -77,21 +77,32 @@ def count_organisations():
 
 def list_organisation_ids():
     for i in organisations:
-         print('\n'+i['id'])
+        print(i['id'])
 
 def organisation_exists():
-     a=int(input("Ievadiet organizacijas id ,kuru velaties uzzinat ,vai tas ir?: "))
-     if organisations['id'] == a:
-          return True
-    
+    a=input("Ievadiet organizacijas id ,kuru velaties uzzinat ,vai tas ir?: ")
+    for organisation in organisations:
+        if organisation['id'] == a:
+            print(f"Organizācijas id {a} eksistē!")
 
+        else:
+            pass
+    
+def delete_organisation_by_id():
+    b=input("Ievadiet organizacijas id ,kuru velaties izdzēst: ")
+    for organisation in organisations:
+            if organisation['id']== b:
+                organisations.remove(organisation)
+            else:
+                pass
 
 def main():
     load_data()
     find_organisation_by_id()
     count_organisations()
     list_organisation_ids()
-    #organisation_exists()
+    organisation_exists()
+    delete_organisation_by_id()
     while (True):
         response=input("(1) Add organisation (2) Print organisations (3) Exit ")
         if response=="1":
