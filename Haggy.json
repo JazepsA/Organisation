@@ -1,0 +1,106 @@
+{
+    "Haggy": [
+        {
+            "id": "12",
+            "vards": "Dainis",
+            "talrunis": "242051",
+            "pilseta": "Rezekne"
+        },
+        {
+            "id": "123",
+            "vards": "Janis",
+            "talrunis": "240412",
+            "pilseta": "Balvi"
+        },
+        {
+            "id": "141",
+            "vards": "Jazeps",
+            "talrunis": "205124",
+            "pilseta": "Ruzina",
+            "apmekletajs": [
+                {
+                    "stundas": "12",
+                    "bernuDaudzums": "2",
+                    "datums": "12.02.2021"
+                }
+            ]
+        },
+        {
+            "id": "303",
+            "vards": "Jups",
+            "talrunis": "2041234",
+            "pilseta": "Preili",
+            "apmekletajs": [
+                {
+                    "stundas": "20",
+                    "bernuDaudzums": "2",
+                    "datums": "20.01.2002",
+                    "udens": 2
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "vards": "Dainisss",
+            "talrunis": "2054123",
+            "pilseta": "Dagda",
+            "apmekletajs": [
+                {
+                    "stundas": "2",
+                    "bernuDaudzums": "4",
+                    "datums": "12.12.2002",
+                    "udens": 3
+                }
+            ]
+        },
+        {
+            "id": "122",
+            "vards": "Germans",
+            "talrunis": "2042523",
+            "pilseta": "Rezekne",
+            "apmekletajs": [
+                {
+                    "stundas": "3",
+                    "bernuDaudzums": "5",
+                    "datums": "None",
+                    "udens": 3
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "vards": "Huligan",
+            "talrunis": "200424",
+            "pilseta": "Adazi",
+            "apmekletajs": [
+                {
+                    "stundas": "20",
+                    "bernuDaudzums": "4",
+                    "datums": "11/12/2024, 11:41:53",
+                    "udens": 3
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "vards": "Lauris",
+            "talrunis": "2025256",
+            "pilseta": "Gauja",
+            "apmekletajs": [
+                {
+                    "stundas": "2",
+                    "bernuDaudzums": "3",
+                    "datums": "11/12/2024, 11:43:54",
+                    "udens": 5
+                }
+            ]
+        },
+        {
+            "id": "44234",
+            "vards": "Janis& C:/Users/Jazeps/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/Jazeps/Documents/GitHub/Organisation/pd.py",
+            "talrunis": "dasdasd",
+            "pilseta": "34234",
+            "apmekletajs": []
+        }
+    ]
+}
