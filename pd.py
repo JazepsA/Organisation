@@ -77,21 +77,50 @@ def save_data():
             'Haggy': Haggy
         }
     print('saving data...')
-    file = open('Haggy.json',"w")
-    json.dump(data,file,indent=4)
+    file = open('Haggy.json',"w",encoding="utf-8")
+    json.dump(data,file,indent=4,ensure_ascii=False)
     print("Data saved!")
 
 def find_info_by_id():
     id=input("Ievadiet organizacijas ID,kuru info velaties atrast: ")
     for a in Haggy:
-          if a['id']== id:
-               print("Cilveks")
-               print(f"{a['vards']} , id: {a['id']}")
+        if a['id']== id:
+            print("Cilveks")
+            print(f"{a['vards']} , id: {a['id']}")
+            while True:
+                response=input("Gribat ievadīt apmeklējuma rezi(y/n): ")
+                if response=='y':
+                    st=input("Stundu daudzums: ")
+                    berni=input("Bērnu daudzums: ")
+                    print("Datums ,kad pieteikums ir veikts: ")
+                    print(datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
+                    udens=int(input("Vai velaties udeni(cik): "))
+                    if udens >=1:
+                        cenaUdenim=0.45
+                        reizinajums=udens*cenaUdenim
+                        print(f"Te ir cena,cik ir jasamaksa par nopirkto udeni : {reizinajums} eiro")
+                    else:
+                        pass
+                
+
+                    apmeklejums={
+                    'stundas':st,
+                    'bernuDaudzums':berni,
+                    'datums':datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S"),
+                    'udens':udens,
+                    }
+
+                    a['apmekletajs'].append(apmeklejums)
+
+                elif response=='n':
+                    break
 
 
 
-global info
 
+
+
+'''
 def pievienot():
     while True:
             response=input("Gribat ievadīt apmeklējuma rezi(y/n): ")
@@ -124,7 +153,7 @@ def pievienot():
 
     Haggy.append['apmekletajs'].append(apmeklejums)
     
-
+'''
 
 
 
@@ -148,7 +177,6 @@ def main():
             exit()
         elif response =="4":
             find_info_by_id()
-            pievienot()
             save_data()
             print("Bye bye!")
             exit()
